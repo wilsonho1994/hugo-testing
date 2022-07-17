@@ -1,5 +1,5 @@
 backend:
-  name: gitlab
+  name: git-gateway
   repo: wilsonho1994/hugo_testing
 media_folder: static/img
 public_folder: /img
