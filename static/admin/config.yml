@@ -7,7 +7,7 @@ public_folder: /img
 collections:
   - name: 'content'
     label: 'Content'
-    folder: 'content/blog' #'themes/hugo-geekdoc/content'
+    folder: 'themes/hugo-geekdoc/content'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
