@@ -5,10 +5,10 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: themes/hugo-geekdoc/content
+  path: ''
   label: Main Page
   create: all
-  match: "*"
+  match: themes/hugo-geekdoc/content/*
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
