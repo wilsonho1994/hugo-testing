@@ -2,5 +2,3 @@
 label: _index.md
 hide_body: true
 fields: []
-pages:
-- themes/hugo-geekdoc/content/level-1/_index.md
