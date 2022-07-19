@@ -1,12 +1,6 @@
 ---
 label: _index.md
 hide_body: true
-fields:
-- name: testing
-  type: text
-  config:
-    required: false
-  label: Testing
-  description: Ttesting
+fields: []
 pages:
 - themes/hugo-geekdoc/content/level-1/_index.md
