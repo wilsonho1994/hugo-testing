@@ -6,6 +6,11 @@ webhook_url:
 sections:
 - type: directory
   path: ''
+  label: Level-1
+  create: all
+  match: "/themes/hugo-geekdoc/content/level-1/*"
+- type: directory
+  path: ''
   label: Main Page
   create: all
   match: themes/hugo-geekdoc/content/*
