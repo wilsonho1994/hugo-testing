@@ -1,11 +1,5 @@
----
-geekdocCollapseSection: true
----
++++
+draft = true
+testing = "test"
 
-Level 1
-
-<!-- spellchecker-disable -->
-
-{{< toc-tree >}}
-
-<!-- spellchecker-enable -->
++++
