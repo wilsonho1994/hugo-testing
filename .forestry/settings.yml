@@ -8,7 +8,7 @@ sections:
   path: ''
   label: Main Page
   create: all
-  match: themes/hugo-geekdoc/content/*
+  match: themes/hugo-geekdoc/content/*/*/*
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
