@@ -6,19 +6,9 @@ webhook_url:
 sections:
 - type: directory
   path: ''
-  label: testing
+  label: Main Page
   create: all
   match: themes/hugo-geekdoc/content/*
-- type: directory
-  path: content
-  label: Pages
-  create: all
-  match: "*"
-- type: directory
-  path: content/blog
-  label: Blog
-  create: all
-  match: "**/*"
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
