@@ -1,4 +1,10 @@
 ---
 label: _index.md
 hide_body: true
-fields: []
+fields:
+- name: testing
+  type: text
+  config:
+    required: false
+  label: Testing
+  description: Ttesting
