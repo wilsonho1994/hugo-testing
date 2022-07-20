@@ -1,0 +1,27 @@
+stages:
+  - pack
+
+variables:
+  DOCKER_HOST: tcp://localhost:2375
+  SERVER_IMAGE_TAG: "${CI_REGISTRY_IMAGE}/server:${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHA}"
+  SERVER_RELEASE_IMAGE_TAG: "${CI_REGISTRY_IMAGE}/server:${CI_COMMIT_REF_NAME}"
+  DOCKER_TLS_CERTDIR: ""
+
+pack-stage:
+  stage: pack
+  services:
+    - name: docker:20.10.7-dind
+      command:
+        - "--tls=false"
+        - "--mtu=1300"
+  image: docker:latest
+  before_script:
+    - mkdir -p $HOME/.docker
+    - echo $DOCKER_AUTH_CONFIG > $HOME/.docker/config.json
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    - docker build --build-arg COMMIT_REF_NAME="$CI_COMMIT_REF_NAME" --pull -t "$SERVER_IMAGE_TAG" .
+    - docker push "$SERVER_IMAGE_TAG"
+  only:
+    - master
+  
